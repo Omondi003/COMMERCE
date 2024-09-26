@@ -8,10 +8,10 @@ import lombok.Setter;
 @Getter
 @Setter
  class Commerce {
-public String Id;
-    public String name;
-    public String Address;
-    public String phoneNumber;
+    private  String Id;
+    private String name;
+    private String Address;
+    private String phoneNumber;
 
 
 
