@@ -13,6 +13,13 @@ import lombok.Setter;
     private String Address;
     private String phoneNumber;
 
-
-
+    @Override
+    public String toString() {
+        return "Commerce{" +
+                "Id='" + Id + '\'' +
+                ", name='" + name + '\'' +
+                ", Address='" + Address + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
+    }
 }
