@@ -3,16 +3,18 @@ package org.example.commerces.Tables;
 public class Product {
     private  String  id;
 
-    private  String  user_id;
+    private  String  product_name;
 
-    private String Address;
+    private String desc;
 
-    private String City;
+    private String SKU;
 
-    private String Country;
+    private String Category_id;
 
-    private String Postal_code;
+    private String Inventory_id;
 
+    private String Price;
 
-    private String Telephone_no;
+    private String Discount_id;
+
 }
