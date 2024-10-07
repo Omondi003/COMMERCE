@@ -16,11 +16,15 @@ public class User_account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private  String id;
+    private  String  id;
 
-    private String name;
+    private String Username;
 
-    private String Address;
+    private String password;
+
+    private String first_name;
+
+    private String last_name;
 
 
     private String phoneNumber;
