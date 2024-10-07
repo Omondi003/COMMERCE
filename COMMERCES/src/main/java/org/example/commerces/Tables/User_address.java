@@ -5,14 +5,14 @@ public class User_address {
 
     private  String  user_id;
 
-    private String Username;
+    private String Address;
 
-    private String password;
+    private String City;
 
-    private String first_name;
+    private String Country;
 
-    private String last_name;
+    private String Postal_code;
 
 
-    private String phoneNumber;
+    private String Telephone_no;
 }
