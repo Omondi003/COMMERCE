@@ -18,6 +18,8 @@ public class Product_inventory {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private  String  id;
 
+    private  String Name;
+
     private  String Quantity;
 
 }
