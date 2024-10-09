@@ -11,9 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 @Getter
 @Setter
-@RestController
-@RequestMapping("/commerce")
-public class User_Controller {
+
+public class User_model {
     private String User_id;
     private String username;
     private  String first_name;
