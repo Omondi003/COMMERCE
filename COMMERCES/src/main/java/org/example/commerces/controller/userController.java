@@ -24,4 +24,10 @@ public class userController {
         this.user_model = user_model;
         return "User_model updated";
     }
+
+    @DeleteMapping({"User_id"})
+    public  String deleteUser_modelDetails(String User_id) {
+        this.user_model = null;
+        return "User_model updated";
+    }
 }
