@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Setter
 
 public class User_model {
-    private String User_id;
+    private String id;
     private String username;
     private  String first_name;
     private  String last_name;

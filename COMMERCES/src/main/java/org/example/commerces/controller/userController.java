@@ -9,7 +9,7 @@ public class userController {
 
     User_model user_model;
     @GetMapping("{User_id}")
-    public User_model getUser_modelDetails(String User_id) {
+    public User_model getUser_modelDetails(@PathVariable String User_id) {
         return  user_model;
     }
 
@@ -28,6 +28,6 @@ public class userController {
     @DeleteMapping({"User_id"})
     public  String deleteUser_modelDetails(String User_id) {
         this.user_model = null;
-        return "User_model updated";
+        return "User_model deleted";
     }
 }
