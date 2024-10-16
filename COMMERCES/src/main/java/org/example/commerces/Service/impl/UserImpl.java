@@ -4,10 +4,11 @@ import lombok.AllArgsConstructor;
 import org.example.commerces.Model.User_model;
 import org.example.commerces.Repository.UserRepo;
 import org.example.commerces.Service.UserService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 @AllArgsConstructor
-
+@Service
 public class UserImpl  implements UserService {
     UserRepo userRepo;
     @Override
