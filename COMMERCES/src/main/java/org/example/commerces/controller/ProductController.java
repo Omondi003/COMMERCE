@@ -16,26 +16,26 @@ public class ProductController {
     }
 
     @GetMapping()
-    public List<User_model> getAllUser_modelDetails() {
+    public List<Product_model> getAllProduct_modelDetails() {
 
-        return userService.getAllUsers();
+        return productService.getAllProducts();
     }
 
     @PostMapping
-    public  String createUser_modelDetails(@RequestBody User_model user_model) {
-        userService.createUser(user_model);
-        return "User_model created";
+    public  String createProduct_modelDetails(@RequestBody Product_model product_model) {
+      productService.createProduct(product_model);
+        return "Product_model created";
     }
 
     @PutMapping
-    public  String updateUser_modelDetails(@RequestBody User_model user_model) {
-        userService.updateUser(user_model);
-        return "User_model updated";
+    public  String updateProduct_modelDetails(@RequestBody Product_model product_model) {
+        productService.updateProduct(product_model);
+        return "Product_model updated successfully";
     }
 
-    @DeleteMapping({"User_id"})
-    public  String deleteUser_modelDetails(String User_id) {
-        userService.deleteUser(User_id);
+    @DeleteMapping({"product_id"})
+    public  String deleteProduct_modelDetails(String product_id) {
+        productService.deleteProduct(product_id);
         return "User_model deleted";
     }
 }
