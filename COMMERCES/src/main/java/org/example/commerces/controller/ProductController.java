@@ -1,13 +1,13 @@
 package org.example.commerces.controller;
 
-import org.example.commerces.Model.Product;
+import org.example.commerces.Model.Product_model;
 import org.example.commerces.Model.User_model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 public class ProductController {
-    Product product
+    Product_model productModel
     @GetMapping("{Product_id}")
     public User_model getProductDetails(@PathVariable("Product_id") String User_id) {
 
