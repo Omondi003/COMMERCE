@@ -12,21 +12,18 @@ import java.util.List;
 public class UserImpl  implements UserService {
     UserRepo userRepo;
     @Override
-    public String createUser(User_model user_model) {
+    public void createUser(User_model user_model) {
         userRepo.save(user_model);
-        return "Success";
     }
 
     @Override
-    public String updateUser(User_model user_model) {
+    public void updateUser(User_model user_model) {
         userRepo.save(user_model);
-        return "Success";
     }
 
     @Override
-    public String deleteUser(String user_id) {
+    public void deleteUser(String user_id) {
         userRepo.deleteById(user_id);
-        return "Success";
     }
 
     @Override
