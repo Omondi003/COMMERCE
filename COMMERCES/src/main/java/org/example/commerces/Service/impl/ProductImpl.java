@@ -1,12 +1,13 @@
 package org.example.commerces.Service.impl;
 
+import lombok.AllArgsConstructor;
 import org.example.commerces.Model.Product_model;
 import org.example.commerces.Repository.ProductRepo;
 import org.example.commerces.Service.ProductService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@AllArgsConstructor
 @Service
 public abstract class ProductImpl  implements ProductService {
     ProductRepo productRepo;
