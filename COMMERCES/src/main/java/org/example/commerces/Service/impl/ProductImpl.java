@@ -6,7 +6,7 @@ import org.example.commerces.Service.ProductService;
 
 import java.util.List;
 
-public class ProductImpl  implements ProductService {
+public abstract class ProductImpl  implements ProductService {
     ProductRepo productRepo;
     @Override
     public void createProduct(Product_model productModel) {
@@ -18,10 +18,7 @@ public class ProductImpl  implements ProductService {
       productRepo.save(productModel);
     }
 
-    @Override
-    public void deleteProduct(Product_model product_model_id) {
 
-    }
 
     @Override
     public void deleteProduct(String product_id) {
@@ -30,11 +27,11 @@ public class ProductImpl  implements ProductService {
 
     @Override
     public Product_model getProduct(String product_id) {
-        return null;
+        return productRepo.findById(product_id).get();
     }
 
     @Override
     public List<Product_model> getAllProducts() {
-        return List.of();
+        return productRepo.findAll();
     }
 }

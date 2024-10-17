@@ -2,16 +2,17 @@ package org.example.commerces.controller;
 
 import org.example.commerces.Model.Product_model;
 import org.example.commerces.Model.User_model;
+import org.example.commerces.Service.ProductService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 public class ProductController {
-    Product_model productModel
-    @GetMapping("{Product_id}")
-    public User_model getProductDetails(@PathVariable("Product_id") String User_id) {
+    ProductService productService;
+    @GetMapping("{product_id}")
+    public Product_model getProductDetails(@PathVariable("product_id") String product_id) {
 
-        return .getUser(User_id);
+        return productService.getProduct(product_id);
     }
 
     @GetMapping()
