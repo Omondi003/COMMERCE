@@ -15,7 +15,7 @@ import lombok.*;
 @Entity
 public class Product_inventory {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private  String  id;
 
     private  String Name;

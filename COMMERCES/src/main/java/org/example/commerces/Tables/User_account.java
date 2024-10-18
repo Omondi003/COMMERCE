@@ -15,7 +15,7 @@ import lombok.*;
 public class User_account {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private  String  id;
 
     private String Username;
@@ -25,7 +25,6 @@ public class User_account {
     private String first_name;
 
     private String last_name;
-
 
     private String phoneNumber;
 

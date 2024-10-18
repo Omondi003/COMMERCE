@@ -14,7 +14,7 @@ import lombok.*;
 @Entity
 public class Payment_details {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private  String  id;
 
     private  String  User_id;

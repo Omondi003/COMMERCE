@@ -15,7 +15,7 @@ import lombok.*;
 @Entity
 public class Card_items {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private  String  id;
 
     private  String  Session_id;
