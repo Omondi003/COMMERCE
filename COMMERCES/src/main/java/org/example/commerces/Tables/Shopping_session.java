@@ -14,7 +14,7 @@ import lombok.*;
 @Entity
 public class Shopping_session {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy =GenerationType.UUID)
     private  String  id;
 
     private  String  user_id;

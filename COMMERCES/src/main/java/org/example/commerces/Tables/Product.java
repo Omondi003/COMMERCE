@@ -15,12 +15,12 @@ import lombok.*;
 @Entity
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy =GenerationType.UUID)
     private  String  id;
 
     private  String  product_name;
 
-    private String desc;
+    private String description;
 
     private String SKU;
 

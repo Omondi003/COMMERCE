@@ -13,12 +13,12 @@ public abstract class ProductImpl  implements ProductService {
     ProductRepo productRepo;
     @Override
     public void createProduct(Product_model productModel) {
-      productRepo.save(productModel);
+      //productRepo.save(productModel);
     }
 
     @Override
     public void updateProduct(Product_model productModel) {
-      productRepo.save(productModel);
+     // productRepo.save(productModel);
     }
 
 
@@ -30,11 +30,13 @@ public abstract class ProductImpl  implements ProductService {
 
     @Override
     public Product_model getProduct(String product_id) {
-        return productRepo.findById(product_id).get();
+      //  return productRepo.findById(product_id).get();
+        return null;
     }
 
     @Override
     public List<Product_model> getAllProducts() {
-        return productRepo.findAll();
+       // return productRepo.findAll();
+        return null;
     }
 }

@@ -7,9 +7,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
+@RequestMapping("/api")
 public class ProductController {
     ProductService productService;
-    @GetMapping("{product_id}")
+    @GetMapping("/{product_id}")
     public Product_model getProductDetails(@PathVariable("product_id") String product_id) {
 
         return productService.getProduct(product_id);

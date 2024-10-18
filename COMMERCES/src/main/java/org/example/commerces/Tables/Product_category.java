@@ -14,11 +14,11 @@ import lombok.*;
 @Entity
 public class Product_category {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private  String  id;
 
     private  String Name;
 
-    private String Desc;
+    private String Description;
 
 }

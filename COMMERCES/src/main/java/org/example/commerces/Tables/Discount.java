@@ -15,14 +15,15 @@ import lombok.*;
 @Entity
 public class Discount {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private  String  id;
 
-    private  String Name;
+    private  String name;
 
-    private String Desc;
+    private String description;
 
-    private  String Discount_percent;
+    private  String discountPercent;
 
-    private String Active;
+    private String active;
+
 }
