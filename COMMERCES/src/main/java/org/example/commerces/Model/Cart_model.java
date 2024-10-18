@@ -1,6 +1,5 @@
 package org.example.commerces.Model;
 
-import jdk.jfr.Name;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +9,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class cart_model {
+public class Cart_model {
     private  String  id;
 
     private  String  Session_id;
