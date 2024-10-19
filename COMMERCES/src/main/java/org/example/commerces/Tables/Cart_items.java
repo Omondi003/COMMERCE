@@ -13,7 +13,7 @@ import lombok.*;
 @Getter
 @ToString
 @Entity
-public class Card_items {
+public class Cart_items {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private  String  id;
