@@ -17,12 +17,12 @@ public class CartImpl implements CartService {
 
     @Override
     public void createProduct(Cart_model cart_model) {
-    cartRepo.save(cart_model);
+    //cartRepo.save(cart_model);
     }
 
     @Override
     public void updateProduct(Cart_model cart_model) {
-
+     //cartRepo.save(cart_model)
     }
 
     @Override
@@ -32,7 +32,7 @@ public class CartImpl implements CartService {
 
     @Override
     public void deleteProduct(String cart_id) {
-
+     //cartRepo.deleteById(cart_id);
     }
 
     @Override
@@ -42,6 +42,6 @@ public class CartImpl implements CartService {
 
     @Override
     public List<Cart_model> getAllProducts() {
-        return List.of();
+       // return cartRepo.findAll();
     }
 }
