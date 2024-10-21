@@ -23,9 +23,9 @@ const RegistrationForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { name, email, password, confirmPassword } = formData;
+    const { first_name, second_name, email, phone_number , password, confirmPassword } = formData;
 
-    if (!name || !email || !password || !confirmPassword) {
+    if (!first_name || !second_name || !phone_number|| !email || !password || !confirmPassword) {
       setError('All fields are required!');
       return;
     }
@@ -52,10 +52,25 @@ const RegistrationForm = () => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          name="name"
-          placeholder="Full Name"
+          name="first_name"
+          placeholder="First name"
           value={formData.name}
           onChange={handleChange}
+        />
+        <input 
+            type='text'
+            name='second_name'
+            placeholder='Second Name'
+            value={formData.second_name}
+            onChange={handleChange}
+        />
+
+        <input 
+            type='number'
+            name='phone_number'
+            placeholder='Phone number'
+            value={FormData.phone_number}
+            onChange={handleChange}
         />
 
         <input
@@ -79,7 +94,9 @@ const RegistrationForm = () => {
           value={formData.confirmPassword}
           onChange={handleChange}
         />
+
         <button type="submit">Register</button>
+        
       </form>
     </div>
   );
