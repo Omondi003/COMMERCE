@@ -5,6 +5,7 @@ import org.example.commerces.Model.Cart_model;
 import org.example.commerces.Repository.CartRepo;
 import org.example.commerces.Service.CartService;
 
+import org.example.commerces.Tables.Cart_items;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -41,7 +42,7 @@ public class CartImpl implements CartService {
     }
 
     @Override
-    public List<Cart_model> getAllProducts() {
-       // return cartRepo.findAll();
+    public List<Cart_items> getAllProducts() {
+       return cartRepo.findAll();
     }
 }
