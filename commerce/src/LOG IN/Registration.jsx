@@ -1,88 +1,89 @@
-// src/RegistrationForm.js
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import './Registration.css'
-
-
-const Registration=()=>{
-
-        const [formData, setFormData] = useState({
-        firstname: '',
-        secondname:' ',
-        email: '',
-        phone:'',
-        location:'',
-        input_password: '',
-        confirm_Password:''
-    }); 
-
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-
-
-    };
-        const handleSubmit = (e) => {
-        e.preventDefault();
- 
-    };
 
 
 
-    return (
-        <div className="reg">
-            <div className="regimg"></div>
-            <form action="" onSubmit={handleSubmit}>
+const RegistrationForm = () => {
+  const [formData, setFormData] = useState({
+    first_name: '',
+    second_name:'',
+    email: '',
+    phone_number:'',
+    password: '',
+    confirmPassword: '',
+  });
 
-            <div>
-                <label htmlFor="Fistname">FIRSTNAME:</label>
-                <input type="text" id="firstname" name="Firstname" value={formData.firstname} onChange={handleChange} />
-            </div>
-        
-            <div>
-                <label htmlFor="secondname">SECONDNAME:</label>
-                <input type="text" id="secondname" name="secondname" value={formData.secondname} onChange={handleChange} />
-            </div>
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
 
-            <div>
-                <label htmlFor="email">EMAIL:</label>
-                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
-            </div>
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
 
-            <div>
-                <label htmlFor="phone">PHONE:</label>
-                <input type="number" id="firstname" name="Firstname" value={formData.phone} onChange={handleChange} />
-            </div>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { name, email, password, confirmPassword } = formData;
 
-            <div>
-                <label htmlFor="location">LOCATION:</label>
-                <input type="text" id="location" name="location" value={formData.location} onChange={handleChange} />
-            </div>
+    if (!name || !email || !password || !confirmPassword) {
+      setError('All fields are required!');
+      return;
+    }
 
-            <div>
-                <label htmlFor="input_password">INPUT PASSWORD:</label>
-                <input type="text" id="input_password" name="input_password" value={formData.input_password} onChange={handleChange} />
-            </div>
+    if (password !== confirmPassword) {
+      setError('Passwords do not match!');
+      return;
+    }
 
-            <div>
-                <label htmlFor="confirm_password">CONFIRM PASSWORD:</label>
-                <input type="text" id="firstname" name="Firstname" value={formData.confirm_Password}  />
-            </div>
+    setError('');
+    setSuccess(true);
+    console.log('User registered:', formData);
+    // Here you can integrate your API call for registration
+  };
 
-              <button type='submit'>Register</button>
-            </form>
-        </div>
-    )
-}
+  return (
+
+    <div className="registration-container">
+      <h2>REGISTRATION</h2>
+
+      {error && <p className="error">{error}</p>}
+      {success && <p className="success">Registration successful!</p>}
+
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Full Name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          value={formData.password}
+          onChange={handleChange}
+        />
+        <input
+          type="password"
+          name="confirmPassword"
+          placeholder="Confirm Password"
+          value={formData.confirmPassword}
+          onChange={handleChange}
+        />
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  );
+};
 
 
-export default Registration;
-
-
-
-
- 
+export default RegistrationForm;
