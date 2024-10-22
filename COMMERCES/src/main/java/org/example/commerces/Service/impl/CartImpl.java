@@ -42,7 +42,7 @@ public class CartImpl implements CartService {
     }
 
     @Override
-    public List<Cart_items> getAllProducts() {
+    public List<Cart_model> getAllProducts() {
        return cartRepo.findAll();
     }
 }

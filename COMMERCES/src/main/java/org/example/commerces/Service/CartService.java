@@ -1,7 +1,6 @@
 package org.example.commerces.Service;
 
 import org.example.commerces.Model.Cart_model;
-import org.example.commerces.Model.Product_model;
 
 import java.util.List;
 
