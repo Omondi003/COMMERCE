@@ -7,6 +7,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping
 public class cartController {
-   Cart_model cart_model;
+   CartService  cartService;
+   @GetMapping("/{product_id}")
+   public Product_model getProductDetails(@PathVariable("product_id") String product_id) {
+
+      return productService.getProduct(product_id);
+   }
+
+   @GetMapping()
+   public List<Product_model> getAllProduct_modelDetails() {
+
+      return productService.getAllProducts();
+   }
 
 }
