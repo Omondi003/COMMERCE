@@ -16,7 +16,7 @@ public class cartController {
    @GetMapping()
    public List<Cart_model> getAllCart_modelDetails() {
 
-      return cartService.getAllCart;
+      return cartService.getAllCart();
    }
 
 }
