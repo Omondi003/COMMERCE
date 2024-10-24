@@ -26,7 +26,7 @@ public class ProductController {
     @PostMapping
     public  String createProduct_modelDetails(@RequestBody Product_model product_model) {
       productService.createProduct(product_model);
-        return "Product_model created";
+        return "Product_model created successfully";
     }
 
     @PutMapping
@@ -38,6 +38,6 @@ public class ProductController {
     @DeleteMapping({"product_id"})
     public  String deleteProduct_modelDetails(String product_id) {
         productService.deleteProduct(product_id);
-        return "User_model deleted";
+        return "User_model deleted sucessfully";
     }
 }

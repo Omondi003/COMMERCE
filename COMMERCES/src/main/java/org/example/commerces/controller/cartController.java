@@ -9,15 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class cartController {
    CartService  cartService;
    @GetMapping("/{cart_id}")
-   public Cart_model getCartDetails(@PathVariable("cart_id") String cart_id {
-
+   public Cart_model getCartDetails(@PathVariable("cart_id") String cart_id){
       return cartService.getCart(cart_id);
    }
 
    @GetMapping()
-   public List<Product_model> getAllProduct_modelDetails() {
+   public List<Cart_model> getAllCart_modelDetails() {
 
-      return productService.getAllProducts();
+      return cartService.getAllCart();
    }
 
 }

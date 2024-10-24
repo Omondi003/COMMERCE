@@ -36,18 +36,18 @@ public class userController {
     @PostMapping
     public  String createUser_modelDetails(@RequestBody User_model user_model) {
     userService.createUser(user_model);
-        return "User_model created";
+        return "User_model created successfully";
     }
 
     @PutMapping
     public  String updateUser_modelDetails(@RequestBody User_model user_model) {
         userService.updateUser(user_model);
-        return "User_model updated";
+        return "User_model updated sucessfully";
     }
 
     @DeleteMapping({"User_id"})
     public  String deleteUser_modelDetails(String User_id) {
       userService.deleteUser(User_id);
-        return "User_model deleted";
+        return "User_model deleted successfully";
     }
 }
