@@ -1,6 +1,7 @@
 package org.example.commerces.Service;
 
 import org.example.commerces.Model.Cart_model;
+import org.example.commerces.Tables.Cart_items;
 
 import java.util.List;
 
@@ -12,5 +13,5 @@ public interface CartService {
     void deleteProduct(String cart_id);
 
    Cart_model getProduct(String cart_id);
-    List<Cart_model> getAllProducts();
+    List<Cart_items> getAllProducts();
 }
