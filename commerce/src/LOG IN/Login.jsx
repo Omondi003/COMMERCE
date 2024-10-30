@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
+import './Login.css'
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -41,7 +42,7 @@ const LoginForm = () => {
       <h2>Login</h2>
 
       {error && <p className="error">{error}</p>}
-      
+
       {success && <p className="success">Login successful!</p>}
       <form onSubmit={handleSubmit}>
         <input
