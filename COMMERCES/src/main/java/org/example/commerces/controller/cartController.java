@@ -28,11 +28,15 @@ public class cartController {
       return "Product_model created successfully";
 
    }
-   @PostMapping
+   @PutMapping
    public String updateCartService(@RequestBody Cart_model cart_model) {
        cartService.createProduct(Cart_model);
        return "Product_model updated successfully";
 
+   }
+   public String deleteCartService( String cartId) {
+      cartService.deleteProduct(cartId);
+      return "Product_model deleted successfully";
    }
 
 
