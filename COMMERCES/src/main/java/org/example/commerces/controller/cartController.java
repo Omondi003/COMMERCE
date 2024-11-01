@@ -24,7 +24,14 @@ public class cartController {
    }
    @PostMapping
    public String createCartService(@RequestBody Cart_model cart_model) {
-       return  cartService.createProduct(Cart_model);
+        cartService.createProduct(Cart_model);
+      return "Product_model created successfully";
+
+   }
+   @PostMapping
+   public String updateCartService(@RequestBody Cart_model cart_model) {
+       cartService.createProduct(Cart_model);
+       return "Product_model updated successfully";
 
    }
 
