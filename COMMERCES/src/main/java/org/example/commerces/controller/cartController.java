@@ -1,22 +1,44 @@
 package org.example.commerces.controller;
 
 import org.example.commerces.Model.Cart_model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.example.commerces.Model.Product_model;
+import org.example.commerces.Service.CartService;
+import org.example.commerces.Tables.Cart_items;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("api")
 public class cartController {
-   CartService  cartService;
-   @GetMapping("/{cart_id}")
-   public Cart_model getCartDetails(@PathVariable("cart_id") String cart_id){
-      return cartService.getCart(cart_id);
+   CartService cartService;
+   @GetMapping("/{CartId}")
+   public Cart_model getCartDetails(@PathVariable("CartId") String cartId) {
+
+      return cartService.getProduct(cartId);
+   }
+   @GetMapping
+   public List<Cart_items> getProducts() {
+
+      return cartService.getAllProducts();
+   }
+   @PostMapping
+   public String createCartService(@RequestBody Cart_model cart_model) {
+        cartService.createProduct(Cart_model);
+      return "Product_model created successfully";
+
+   }
+   @PutMapping
+   public String updateCartService(@RequestBody Cart_model cart_model) {
+       cartService.createProduct(Cart_model);
+       return "Product_model updated successfully";
+
+   }
+   public String deleteCartService( String cartId) {
+      cartService.deleteProduct(cartId);
+      return "Product_model deleted successfully";
    }
 
-   @GetMapping()
-   public List<Cart_model> getAllCart_modelDetails() {
 
-      return cartService.getAllCart();
-   }
 
 }
