@@ -29,4 +29,9 @@ public class OrderController {
         orderService.updateOrder(order_model);
         return "Order updated successfully";
     }
+    @DeleteMapping("Id")
+    public String deleteOrderDetails(String Id) {
+        orderService.deleteOrder(Id);
+        return "Order deleted successfully";
+    }
 }
