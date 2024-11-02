@@ -2,10 +2,7 @@ package org.example.commerces.controller;
 
 import org.example.commerces.Model.Order_model;
 import org.example.commerces.Service.OrderService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,7 +15,13 @@ public class OrderController {
         return orderService.getOrder(Id);
 
     }
+    @GetMapping
     public List<Order_model> getAllOrders() {
         return orderService.getAllOrders();
+    }
+    @PostMapping
+    public String createOrderDetails(@RequestBody Order_model order_model) {
+        orderService.createOrder(order_model);
+        return "Order created successfully";
     }
 }
