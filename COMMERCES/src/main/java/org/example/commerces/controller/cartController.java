@@ -34,6 +34,7 @@ public class cartController {
        return "Product_model updated successfully";
 
    }
+   @DeleteMapping("CartId")
    public String deleteCartService( String cartId) {
       cartService.deleteProduct(cartId);
       return "Product_model deleted successfully";
