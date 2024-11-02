@@ -24,4 +24,9 @@ public class OrderController {
         orderService.createOrder(order_model);
         return "Order created successfully";
     }
+    @PutMapping
+    public String updateOrderDetails(@RequestBody Order_model order_model) {
+        orderService.updateOrder(order_model);
+        return "Order updated successfully";
+    }
 }
