@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping
 public class OrderController {
@@ -15,5 +17,8 @@ public class OrderController {
     public Order_model getOrderDetails(  @PathVariable ("Id") String Id) {
         return orderService.getOrder(Id);
 
+    }
+    public List<Order_model> getAllOrders() {
+        return orderService.getAllOrders();
     }
 }
